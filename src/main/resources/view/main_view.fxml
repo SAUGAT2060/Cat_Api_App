@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="catapp.controller.MainController"
+            stylesheets="@../css/styles.css">
+
+    <top>
+        <Label text="JavaFX Cat App - Bengal Gallery" styleClass="header"/>
+    </top>
+
+    <center>
+        <TilePane fx:id="imagePane" hgap="10" vgap="10" styleClass="tile-pane"/>
+    </center>
+
+    <bottom>
+        <VBox alignment="CENTER" spacing="10" styleClass="bottom-box">
+            <Label fx:id="introText"
+                   text="You wanna see beautiful cat pictures?
+Click the button below to get them!"
+                   wrapText="true"
+                   styleClass="intro-text"/>
+            <Button text="Load Cats" onAction="#loadCats" styleClass="button"/>
+        </VBox>
+    </bottom>
+
+</BorderPane>
